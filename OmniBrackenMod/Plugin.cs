@@ -51,7 +51,7 @@ namespace OmniBrackenMod
             TerminalVideo = bundle.LoadAsset<VideoClip>("assets/Terminal Video.mp4");
             StalkAudio = bundle.LoadAsset<GameObject>("assets/StalkSource.prefab");
             CaughtVoice = bundle.LoadAsset<AudioClip>("assets/VineBoom.mp3");
-            StunSFX = bundle.LoadAsset<AudioClip>("assets/Stalk SFX.mp3");
+            StunSFX = bundle.LoadAsset<AudioClip>("assets/Stun.mp3");
             CrackNeckAudio = bundle.LoadAsset<AudioClip>("assets/Jumpscare.mp3");
 
             Instance = this;
