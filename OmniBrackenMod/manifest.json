@@ -1,6 +1,9 @@
 ﻿{
-  "name": "Omni-Bracken",
+  "name": "Omni_Bracken",
   "version_number": "1.0.0",
   "website_url": "https://github.com/Krevace/omni-bracken-mod",
-  "description": "Replaces the Bracken with Omni-Man. Lots of flavor and customization options."
+  "description": "Replaces the Bracken with Omni-Man. Lots of flavor and customization options.",
+  "dependencies": [
+    "BepInEx-BepInExPack-5.4.2100"
+  ]
 }
