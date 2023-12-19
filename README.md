@@ -3,4 +3,4 @@
 
 # Lethal Company Omni-Bracken Mod
 
-Replaces the Bracken with Omni-Man. Changes up the terminal entry, adds some sound effects, and makes him pretty *animative*. Lots of flavor and customization options.
+Replaces the Bracken with Omni-Man. Changes up the terminal entry, adds some sound effects, emits a red glow from his eyes, and makes him pretty *animative*. Lots of flavor and customization options.
