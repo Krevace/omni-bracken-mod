@@ -10,12 +10,12 @@
     </PropertyGroup>
     
     <ItemGroup>
-        <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all" />
-        <PackageReference Include="BepInEx.Core" Version="5.*">
+        <PackageReference Include="BepInEx.Analyzers" Version="1.0.8" PrivateAssets="all" />
+        <PackageReference Include="BepInEx.Core" Version="5.4.21">
           <IncludeAssets></IncludeAssets>
         </PackageReference>
-        <PackageReference Include="BepInEx.PluginInfoProps" Version="1.*" />
-        <PackageReference Include="UnityEngine.Modules" Version="2022.3.9" IncludeAssets="compile" />
+        <PackageReference Include="BepInEx.PluginInfoProps" Version="2.1.0" />
+        <PackageReference Include="UnityEngine.Modules" Version="6000.0.47" IncludeAssets="compile" />
     </ItemGroup>
 
     <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
@@ -38,6 +38,6 @@
     </ItemGroup>
 
     <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-      <Exec Command=" xcopy /Y &quot;$(TargetDir)OmniBrackenMod.dll&quot; &quot;..\..\..\Games\steamapps\common\Lethal Company\BepInEx\plugins&quot;&#xA;" />
+      <Exec Command=" xcopy /Y &quot;$(TargetDir)OmniBrackenMod.dll&quot; &quot;%APPDATA%\r2modmanPlus-local\LethalCompany\profiles\Mods\BepInEx\plugins\Krevace-Omni_Bracken&quot;&#xA;" />
     </Target>
 </Project>

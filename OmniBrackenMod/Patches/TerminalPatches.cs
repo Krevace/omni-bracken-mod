@@ -1,4 +1,5 @@
-﻿using HarmonyLib;
+﻿using System.Linq;
+using HarmonyLib;
 
 namespace OmniBrackenMod.Patches
 {
@@ -9,10 +10,21 @@ namespace OmniBrackenMod.Patches
         [HarmonyPostfix]
         public static void BeginUsingTerminalPatch(Terminal __instance)
         {
-            __instance.terminalNodes.allKeywords[36].word = "omni-man";
-            __instance.enemyFiles[1].creatureName = "Omni-Man";
-            __instance.enemyFiles[1].displayVideo = Plugin.TerminalVideo;
-            __instance.enemyFiles[1].displayText = Plugin.TerminalText.text;
+            var keyword = __instance.terminalNodes.allKeywords
+                .FirstOrDefault(k => k.name == "Bracken");
+            if (keyword != null)
+            {
+                keyword.word = "omni-man";
+            }
+
+            var node = __instance.enemyFiles
+                .FirstOrDefault(n => n.name == "BrackenFile");
+            if (node != null)
+            {
+                node.creatureName = "Omni-Man";
+                node.displayVideo = Plugin.TerminalVideo;
+                node.displayText = Plugin.TerminalText.text;
+            }
         }
     }
 }
